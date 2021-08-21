@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: #344973;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.start.PlayController">
+   <children>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER" orientation="VERTICAL" prefHeight="500.0" prefWidth="900.0" rowValignment="TOP" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Anny's arcanoid" textFill="#eda98c">
+               <font>
+                  <Font name="Broadway" size="40.0" />
+               </font>
+               <padding>
+                  <Insets bottom="50.0" />
+               </padding>
+            </Label>
+            <Button fx:id="playButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="58.0" prefWidth="220.0" style="-fx-background-color: #344973; -fx-border-color: #EDA98C; -fx-border-radius: 10;" text="Play" textAlignment="CENTER" textFill="#eda98c" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <FlowPane.margin>
+                  <Insets />
+               </FlowPane.margin>
+            </Button>
+         </children>
+      </FlowPane>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DISAPPEAR" />
+   </cursor>
+</AnchorPane>

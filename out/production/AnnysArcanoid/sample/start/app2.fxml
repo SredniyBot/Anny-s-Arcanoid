@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MainPane" maxHeight="Infinity" maxWidth="Infinity" minHeight="600.0" minWidth="1100.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="600.0" prefWidth="1100.0" style="-fx-background-color: #344973;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.game.MainController">
+    <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="420.0" minWidth="220.0" style="-fx-border-color: #6D87B9; -fx-border-radius: 10;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="str1" layoutX="15.0" layoutY="16.0" onMouseClicked="#initialize" rotate="21.8" text="Умница!" textFill="#eda98c" visible="false">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="str6" layoutX="4.0" layoutY="362.0" onMouseClicked="#initialize" rotate="-15.3" text="Ты неотразима!" textFill="#eda98c" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="str2" layoutX="11.0" layoutY="88.0" onMouseClicked="#initialize" rotate="-24.8" text="Ты молодец!" textFill="#eda98c" visible="false">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="str4" layoutX="8.0" layoutY="225.0" onMouseClicked="#initialize" rotate="-16.7" text="Великолепно!" textFill="#eda98c" visible="false">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="str3" layoutX="7.0" layoutY="159.0" onMouseClicked="#initialize" rotate="8.7" text="Превосходно!" textFill="#eda98c" visible="false">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="str5" layoutX="8.0" layoutY="300.0" onMouseClicked="#initialize" rotate="18.4" text="Просто супер!" textFill="#eda98c" visible="false">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="5.0" />
+               </BorderPane.margin>
+            </Pane>
+         </left>
+         <center>
+            <Pane fx:id="gamePane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="480.0" minWidth="530.0" onMouseClicked="#initialize" onMouseDragged="#initialize" onMouseEntered="#initialize" onMouseExited="#initialize" onMouseMoved="#initialize" onMousePressed="#initialize" style="-fx-border-color: #6D87B9; -fx-border-radius: 10;" BorderPane.alignment="CENTER">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+               <children>
+                  <Group fx:id="gameGroup" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </Pane>
+         </center>
+         <right>
+            <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="420.0" minWidth="220.0" prefHeight="420.0" prefWidth="220.0" style="-fx-border-color: #6D87B9; -fx-border-radius: 10;" BorderPane.alignment="CENTER">
+               <children>
+                  <FlowPane alignment="CENTER" columnHalignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="264.0" minWidth="147.0" orientation="VERTICAL" prefHeight="420.0" prefWidth="220.0">
+                     <children>
+                        <Label text="Статистика" textFill="#eda98c">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <FlowPane.margin>
+                              <Insets />
+                           </FlowPane.margin>
+                        </Label>
+                        <Arc fx:id="resultArc" fill="#eba78d" length="360.0" nodeOrientation="LEFT_TO_RIGHT" radiusX="60.0" radiusY="60.0" startAngle="30.0" stroke="TRANSPARENT" type="ROUND">
+                           <FlowPane.margin>
+                              <Insets bottom="20.0" top="30.0" />
+                           </FlowPane.margin>
+                        </Arc>
+                        <Label fx:id="resultTxt" text="Результат:" textFill="#eda98c">
+                           <FlowPane.margin>
+                              <Insets bottom="10.0" />
+                           </FlowPane.margin>
+                        </Label>
+                        <Label fx:id="ballsOnField" text="Мячей на поле:" textFill="#eda98c" />
+                        <FlowPane alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="heart1" fitHeight="30.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../game/assets/heart.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="heart2" fitHeight="30.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../game/assets/heart.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fx:id="heart3" fitHeight="30.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../game/assets/heart.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </FlowPane>
+                     </children>
+                  </FlowPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets right="5.0" />
+               </BorderPane.margin>
+            </Pane>
+         </right>
+      </BorderPane>
+    </children>
+    <cursor>
+        <Cursor fx:constant="DISAPPEAR" />
+    </cursor>
+</AnchorPane>
